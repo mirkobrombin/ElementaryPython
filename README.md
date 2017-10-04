@@ -17,16 +17,6 @@ com.github.mirkobrombin.elementarypython
 
 ## Installation
 
-### For Debian based
-
-Grab an updated debian package [here](https://github.com/mirkobrombin/ElementaryPython/releases)
-
-```bash
-dpkg -i com.github.mirkobrombin.elementarypython*.deb
-```
-
-### Install from source
-
 Grab an updated release [here](https://github.com/mirkobrombin/ElementaryPython/archive/master.zip) or use **git**:
 
 ```bash
