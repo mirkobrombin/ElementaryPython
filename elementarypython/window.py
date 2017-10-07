@@ -22,11 +22,10 @@ import gi
 from datetime import datetime
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk
-#Components
+import constants as cn
 import headerbar as hb
 import welcome as wl
 
-headers = {'X-Auth-Token':API_KEY, 'X-Response-Control': 'minified'}
 stylesheet = """
     @define-color colorPrimary #249C5F;
     @define-color textColorPrimary #f2f2f2;
@@ -36,7 +35,7 @@ stylesheet = """
 class Window(Gtk.Window):
 
     def __init__(self):
-        Gtk.Window.__init__(self, title="Messages")
+        Gtk.Window.__init__(self, title=cn.App.application_name)
 
         hbar = hb.Headerbar()
         self.set_titlebar(hbar)
