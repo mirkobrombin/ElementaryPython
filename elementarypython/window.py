@@ -26,12 +26,6 @@ import constants as cn
 import headerbar as hb
 import welcome as wl
 
-stylesheet = """
-    @define-color colorPrimary #249C5F;
-    @define-color textColorPrimary #f2f2f2;
-    @define-color textColorPrimaryShadow #197949;
-""";
-
 class Window(Gtk.Window):
 
     def __init__(self):
