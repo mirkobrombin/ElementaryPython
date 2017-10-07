@@ -26,7 +26,6 @@ from gi.repository import Gtk, Gdk
 import headerbar as hb
 import welcome as wl
 
-API_KEY = "cb3a6fe9d9284af79a13661ff6191ea6"
 headers = {'X-Auth-Token':API_KEY, 'X-Response-Control': 'minified'}
 stylesheet = """
     @define-color colorPrimary #249C5F;
