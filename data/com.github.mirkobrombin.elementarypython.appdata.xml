@@ -19,7 +19,7 @@
   <url type="bugtracker">https://github.com/mirkobrombin/elementarypython/issues/labels/bug</url>
   <url type="help">https://github.com/mirkobrombin/elementarypython/issues/new</url>
   <custom>
-     <value key="x-appcenter-color-primary">#ac7339</value>
-     <value key="x-appcenter-color-primary-text">#f9f2ec</value>
+     <value key="x-appcenter-color-primary">#645552</value>
+     <value key="x-appcenter-color-primary-text">#EEEDEC</value>
   </custom>
 </component>
