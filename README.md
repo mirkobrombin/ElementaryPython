@@ -1,7 +1,7 @@
 # Elementary Python
 
 This is a python application template for elementary OS.
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.png) ![Screenshot](screenshot-dark.png)
 
 ## Requirements
 
