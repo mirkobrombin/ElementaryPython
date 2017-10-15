@@ -17,14 +17,14 @@
     You should have received a copy of the GNU General Public License
     along with ElementaryPython.  If not, see <http://www.gnu.org/licenses/>.
 '''
-
-import gi
-from datetime import datetime
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk
 import constants as cn
 import headerbar as hb
 import welcome as wl
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, Gdk
+
 
 class Window(Gtk.Window):
 
@@ -37,4 +37,3 @@ class Window(Gtk.Window):
         self.welcome = wl.Welcome()
 
         self.add(self.welcome)
-

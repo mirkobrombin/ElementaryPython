@@ -18,11 +18,12 @@
     along with ElementaryPython.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
+import constants as cn
 import gi
 import webbrowser
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk
-import constants as cn
+
 
 class Headerbar(Gtk.HeaderBar):
 
@@ -38,6 +39,6 @@ class Headerbar(Gtk.HeaderBar):
         self.hbar_help.set_icon_name("help-contents")
         self.hbar_help.connect("clicked", self.on_hbar_help_clicked)
         self.pack_end(self.hbar_help)
-    
+
     def on_hbar_help_clicked(self, widget):
         webbrowser.open_new_tab("https://github.com/mirkobrombin/ElementaryPython")

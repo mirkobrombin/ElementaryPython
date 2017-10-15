@@ -21,17 +21,19 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
+
 class App:
     application_id = "com.github.mirkobrombin.elementarypython"
     application_name = "Python Template"
     application_description = "This is just a python template"
-    application_version ="1.0"
+    application_version = "1.0"
     main_url = "https://github.com/mirkobrombin/elementarypython"
     bug_url = "https://github.com/mirkobrombin/elementarypython/issues/labels/bug"
     help_url = "https://github.com/mirkobrombin/ElementaryPython/issues"
     about_authors = {"Mirko Brombin <brombinmirko@gmail.com>"}
     about_comments = application_description
     about_license_type = Gtk.License.GPL_3_0
+
 
 class Colors:
     primary_color = "#645552"
