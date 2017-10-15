@@ -18,16 +18,14 @@
     along with ElementaryPython.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import os
+import constants as cn
+import subprocess
 import gi
 import webbrowser
-gi.require_version('Gtk', '3.0')
-gi.require_version('Granite', '1.0')
-from gi.repository import Gtk, Gdk, Granite
-import constants as cn
+
 
 class Welcome(Gtk.Box):
-        
+
     # Define variable for GTK global theme
     settings = Gtk.Settings.get_default()
 
@@ -42,7 +40,7 @@ class Welcome(Gtk.Box):
         welcome.append("object-inverse", "Dark mode", "Switch to the dark side")
         welcome.append("utilities-terminal", "Open Terminal", "Just an example of action")
         welcome.append("help-contents", "Info", "Learn more about this application")
-        
+
         welcome.connect("activated", self.on_welcome_activated)
 
         self.add(welcome)
@@ -54,10 +52,13 @@ class Welcome(Gtk.Box):
                 self.settings.set_property("gtk-application-prefer-dark-theme", False)
             else:
                 self.settings.set_property("gtk-application-prefer-dark-theme", True)
-        elif index == 0:
+        elif index == 1:
             # Open terminal
-            os.system("io.elementary.terminal")
-        else:
+            try:
+                subprocess.check_output("io.elementary.terminal")
+            except:
+                print("Terminal Not Found!")
+        elif index == 2:
             # Open webpage
             webbrowser.open_new_tab("https://github.com/mirkobrombin/ElementaryPython")
         print("Index: "+str(index))
