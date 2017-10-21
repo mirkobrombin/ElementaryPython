@@ -1,0 +1,14 @@
+# Bottles
+# Copyright (C) 2017-2018
+# This file is distributed under the GNU General Public License
+# Mirko Brombin <brombinmirko@gmail.com>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: bottles/constants.py:34
+msgid "This is just a python template"
+msgstr "Solo un template in python"

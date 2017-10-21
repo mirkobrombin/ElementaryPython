@@ -18,22 +18,35 @@
     along with ElementaryPython.  If not, see <http://www.gnu.org/licenses/>.
 '''
 import gi
+import os
+import locale
+import gettext
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
+try:
+    current_locale, encoding = locale.getdefaultlocale()
+    locale_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locale')
+    translate = gettext.translation ("elementarypython", locale_path, [current_locale] )
+    _ = translate.gettext
+except FileNotFoundError:
+    _ = str
 
 class App:
+    application_shortname = "elementarypython"
     application_id = "com.github.mirkobrombin.elementarypython"
-    application_name = "Python Template"
-    application_description = "This is just a python template"
-    application_version = "1.0"
+    application_name = "Elementary Python"
+    application_description = _('This is just a python template')
+    application_version ="1.1"
+    app_years = "2017-2018"
     main_url = "https://github.com/mirkobrombin/elementarypython"
     bug_url = "https://github.com/mirkobrombin/elementarypython/issues/labels/bug"
-    help_url = "https://github.com/mirkobrombin/ElementaryPython/issues"
-    about_authors = {"Mirko Brombin <brombinmirko@gmail.com>"}
+    help_url = "https://github.com/mirkobrombin/elementarypython/issues"
+    translate_url = "https://github.com/mirkobrombin/elementarypython/blob/master/CONTRIBUTING.md"
+    about_authors = None # Mirko Brombin <brombinmirko@gmail.com>
+    about_documenters = None
     about_comments = application_description
     about_license_type = Gtk.License.GPL_3_0
-
 
 class Colors:
     primary_color = "#645552"

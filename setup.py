@@ -11,7 +11,11 @@ install_data = [('share/applications', ['data/com.github.mirkobrombin.elementary
                 ('bin/elementarypython',['elementarypython/main.py']),
                 ('bin/elementarypython',['elementarypython/welcome.py']),
                 ('bin/elementarypython',['elementarypython/window.py']),
-                ('bin/elementarypython',['elementarypython/__init__.py'])]
+                ('bin/elementarypython',['elementarypython/__init__.py']),
+                ('bin/elementarypython/locale/it_IT/LC_MESSAGES',
+                    ['elementarypython/locale/it_IT/LC_MESSAGES/elementarypython.mo']),
+                ('bin/elementarypython/locale/it_IT/LC_MESSAGES',
+                    ['elementarypython/locale/it_IT/LC_MESSAGES/elementarypython.po'])]
 
 setup(  name='Elementary Python',
         version='0.0.1',

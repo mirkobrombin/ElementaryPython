@@ -19,19 +19,30 @@
 '''
 
 import gi
+import locale
+import gettext
+import argparse
 gi.require_version('Gtk', '3.0')
 gi.require_version('Granite', '1.0')
-from gi.repository import Gtk, Gdk, Granite
+from gi.repository import Gtk, Gio, Gdk, Granite, GObject
 import constants as cn
 import window as wn
 
 class Application(Granite.Application):
 
     def do_activate(self):
-        win = wn.Window()
-        win.set_default_size(600, 600) 
-        win.connect("delete-event", Gtk.main_quit)
-        win.show_all()
+        self.win = wn.Window()
+        self.win.set_default_size(600, 600) 
+        self.win.connect("delete-event", Gtk.main_quit)
+
+        parser = argparse.ArgumentParser(description = cn.App.application_description)
+        parser.add_argument('--about', action='store_true', help='About '+cn.App.application_name)
+        args = parser.parse_args()  
+        if args.about == True:
+            self.show_about(self.win)
+        else:
+            self.win.show_all()
+
         Gtk.main()
 
 app = Application()
@@ -49,4 +60,19 @@ Gtk.StyleContext.add_provider_for_screen(
     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
 )
 
-app.run("", 1)
+app.application_id = cn.App.application_id
+app.flags = Gio.ApplicationFlags.FLAGS_NONE
+app.program_name = cn.App.application_name
+app.build_version = cn.App.application_version
+app.about_documenters = cn.App.about_documenters
+app.about_authors = cn.App.about_authors
+app.about_comments = cn.App.about_comments
+app.app_years = cn.App.app_years
+app.build_version = cn.App.application_version;
+app.app_icon = cn.App.application_id
+app.main_url = cn.App.main_url
+app.bug_url = cn.App.bug_url
+app.help_url = cn.App.help_url
+app.translate_url = cn.App.translate_url
+
+app.run("", Gio.ApplicationFlags.FLAGS_NONE)

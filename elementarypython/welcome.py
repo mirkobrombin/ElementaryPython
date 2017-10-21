@@ -21,11 +21,13 @@
 import constants as cn
 import subprocess
 import gi
+import os
+import locale
+import gettext
 gi.require_version('Gtk', '3.0')
 gi.require_version('Granite', '1.0')
 from gi.repository import Gtk, Gdk, Granite
 import webbrowser
-
 
 class Welcome(Gtk.Box):
 
@@ -35,14 +37,22 @@ class Welcome(Gtk.Box):
     def __init__(self):
         Gtk.Box.__init__(self, False, 0)
 
+        try:
+            current_locale, encoding = locale.getdefaultlocale()
+            locale_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locale')
+            translate = gettext.translation (cn.App.application_shortname, locale_path, [current_locale] )
+            _ = translate.gettext
+        except FileNotFoundError:
+            _ = str
+
         # Create welcome widget
         welcome = Granite.WidgetsWelcome()
         welcome = welcome.new("Welcome", cn.App.application_description)
 
         # Welcome voices
-        welcome.append("object-inverse", "Dark mode", "Switch to the dark side")
-        welcome.append("utilities-terminal", "Open Terminal", "Just an example of action")
-        welcome.append("help-contents", "Info", "Learn more about this application")
+        welcome.append("object-inverse", _('Dark Mode'), _('Switch to the dark side'))
+        welcome.append("utilities-terminal", _('Open Terminal'), _('Just an example of action'))
+        welcome.append("help-contents", _('Info'), _('Learn more about this application'))
 
         welcome.connect("activated", self.on_welcome_activated)
 
@@ -60,7 +70,7 @@ class Welcome(Gtk.Box):
             try:
                 subprocess.check_output("io.elementary.terminal")
             except:
-                print("Terminal Not Found!")
+                print(_('Terminal Not Found!'))
         elif index == 2:
             # Open webpage
             webbrowser.open_new_tab("https://github.com/mirkobrombin/ElementaryPython")
