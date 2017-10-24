@@ -20,7 +20,7 @@
 </p>
 
 ## How to use this template
-First of all, I am happy to help you by providing a base for creating your own elementary OS applications! :kissing_heart:  
+First of all, I am happy to help you by providing a starter pack for creating your own elementary OS applications! :kissing_heart:  
   
 This template is available to everyone under the [GPL3 license](https://github.com/mirkobrombin/ElementaryPython/blob/master/LICENSE), which means you are obliged to keep that license or change it with a compatible one.  
 
