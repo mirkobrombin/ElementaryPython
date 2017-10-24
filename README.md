@@ -24,7 +24,7 @@ First of all, I am happy to help you by providing a starter pack for creating yo
   
 This template is available to everyone under the [GPL3 license](https://github.com/mirkobrombin/ElementaryPython/blob/master/LICENSE), which means you are obliged to keep that license or change it with a compatible one.  
 
-In order to promote the development of this project and respecting the license, it is correct and moral to [attribute third party code credits to the author[(https://opensource.stackexchange.com/a/4582)].  
+In order to promote the development of this project and respecting the license, it is correct and moral to [attribute third party code credits to the author](https://opensource.stackexchange.com/a/4582)].  
 
 Since your application can be an example for other users who intend to develop their own, you can ask [here](https://github.com/mirkobrombin/ElementaryPython/issues/new) to list your application on this page.  
 
