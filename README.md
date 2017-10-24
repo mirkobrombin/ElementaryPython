@@ -22,7 +22,7 @@
 ## How to use this template
 First of all, I am happy to help you by providing a starter pack for creating your own elementary OS applications! :kissing_heart:  
   
-This template is available to everyone under the [GPL3 license](https://github.com/mirkobrombin/ElementaryPython/blob/master/LICENSE), which means you are obliged to keep that license or change it with a compatible one.  
+This template is available to everyone under the [GPL3 license](https://github.com/mirkobrombin/ElementaryPython/blob/master/LICENSE), which means that you have to keep that license or change it with a compatible one.  
 
 In order to promote the development of this project and respecting the license, it is correct and moral to [attribute third party code credits to the author](https://opensource.stackexchange.com/a/4582).  
 
