@@ -34,11 +34,33 @@ class Headerbar(Gtk.HeaderBar):
         self.set_show_close_button(True)
         self.props.title = cn.App.application_name
 
-        # settings button
+        # help button
         self.hbar_help = Gtk.ToolButton()
         self.hbar_help.set_icon_name("help-contents")
         self.hbar_help.connect("clicked", self.on_hbar_help_clicked)
         self.pack_end(self.hbar_help)
+        
+        # color button
+        self.hbar_color = Gtk.ColorButton.new_with_rgba(Gdk.RGBA(222, 222, 222, 255))
+        self.hbar_color.connect("color_set", self.on_hbar_color_color_set)
+        self.pack_end(self.hbar_color)
 
     def on_hbar_help_clicked(self, widget):
         webbrowser.open_new_tab("https://github.com/mirkobrombin/ElementaryPython")
+
+    def on_hbar_color_color_set(self, widget):
+        cn.Colors.primary_color = widget.get_rgba().to_string()
+
+        # There are better methods to define CSS variables, but this is an example.
+        stylesheet = """
+            @define-color colorPrimary """+cn.Colors.primary_color+""";
+            @define-color textColorPrimary """+cn.Colors.primary_text_color+""";
+            @define-color textColorPrimaryShadow """+cn.Colors.primary_text_shadow_color+""";
+        """;
+
+        style_provider = Gtk.CssProvider()
+        style_provider.load_from_data(bytes(stylesheet.encode()))
+        Gtk.StyleContext.add_provider_for_screen(
+            Gdk.Screen.get_default(), style_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        )
