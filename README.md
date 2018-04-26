@@ -35,6 +35,7 @@ I've created some applications based on this template:
 - [Bottles](https://github.com/mirkobrombin/Bottles)
 - [Football](https://github.com/mirkobrombin/Football)
 - [PPAExtender](https://github.com/mirkobrombin/PPAExtender)
+- [Kangaroo](https://github.com/mirkobrombin/Kangaroo)
 
 ## Problems/New Features?
 In any case, ask for support [here](https://github.com/mirkobrombin/ElementaryPython/issues).
