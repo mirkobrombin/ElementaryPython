@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Elementary Python
+GenericName=ElementaryPython
+Comment=This is just a python template
+Categories=Development;
+Exec=com.github.mirkobrombin.elementarypython
+Icon=com.github.mirkobrombin.elementarypython
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=com.github.mirkobrombin.elementarypython
+Keywords=Python;

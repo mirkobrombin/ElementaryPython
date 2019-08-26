@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Allen B -->
+<component type="desktop">
+  <id>com.github.mirkobrombin.elementarypython</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Elementary Python</name>
+  <summary>This is just a python template</summary>
+  <developer_name>Mirko Brombin</developer_name>
+  <screenshots>
+      <screenshot type="default">
+          <image>https://raw.githubusercontent.com/mirkobrombin/elementarypython/master/screenshot.png</image>
+      </screenshot>
+  </screenshots>
+  <description>
+    <p>This is just a python template.</p>
+  </description>
+  <url type="homepage">https://github.com/mirkobrombin/elementarypython</url>
+  <url type="bugtracker">https://github.com/mirkobrombin/elementarypython/issues/labels/bug</url>
+  <url type="help">https://github.com/mirkobrombin/elementarypython/issues/new</url>
+  <custom>
+     <value key="x-appcenter-color-primary">#645552</value>
+     <value key="x-appcenter-color-primary-text">#EEEDEC</value>
+  </custom>
+</component>
