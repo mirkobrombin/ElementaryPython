@@ -36,6 +36,7 @@ I've created some applications based on this template:
 - [Football](https://github.com/brombinmirko/Football)
 - [PPAExtender](https://github.com/brombinmirko/PPAExtender)
 - [Kangaroo](https://github.com/brombinmirko/Kangaroo)
+- [ytdownloader](https://github.com/michaldev/ytdownloader)
 
 ## Problems/New Features?
 In any case, ask for support [here](https://github.com/brombinmirko/ElementaryPython/issues).
