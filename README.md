@@ -31,12 +31,17 @@ Since your application can be an example for other users who intend to develop t
 If you have any doubts or need help with development, do not hesitate to contact me :blush:
 
 ## Examples
-I've created some applications based on this template: 
+There are several applications based on this template:: 
 - [Bottles](https://github.com/brombinmirko/Bottles)
 - [Football](https://github.com/brombinmirko/Football)
 - [PPAExtender](https://github.com/brombinmirko/PPAExtender)
 - [Kangaroo](https://github.com/brombinmirko/Kangaroo)
 - [ytdownloader](https://github.com/michaldev/ytdownloader)
+- [Golden Section Algorithm Visualization](https://github.com/stsdc/goldensection)
+- [clips](https://github.com/hezral/clips)
+- [Mastodon-GTK+](https://github.com/AnaGelez/mastodon_gtk)
+- [Rogu](https://github.com/hezral/Rogu)
+
 
 ## Problems/New Features?
 In any case, ask for support [here](https://github.com/brombinmirko/ElementaryPython/issues).
