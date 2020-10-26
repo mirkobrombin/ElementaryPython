@@ -43,8 +43,6 @@ class App:
     bug_url = "https://git.mirko.pm/brombinmirko/ElementaryPython/issues/labels/bug"
     help_url = "https://git.mirko.pm/brombinmirko/ElementaryPython/issues"
     translate_url = "https://git.mirko.pm/brombinmirko/ElementaryPython/blob/master/CONTRIBUTING.md"
-    about_authors = None # Mirko Brombin <brombinmirko@gmail.com>
-    about_documenters = None
     about_comments = application_description
     about_license_type = Gtk.License.GPL_3_0
 
