@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-   Copyright 2017 Mirko Brombin (brombinmirko@gmail.com)
+   Copyright 2017 Mirko Brombin <send@mirko.pm>
 
    This file is part of ElementaryPython.
 

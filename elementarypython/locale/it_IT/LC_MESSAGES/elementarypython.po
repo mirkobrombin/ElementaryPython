@@ -1,7 +1,7 @@
 # ElementaryPython
 # Copyright (C) 2017-2018
 # This file is distributed under the GNU General Public License
-# Mirko Brombin <brombinmirko@gmail.com>
+# Mirko Brombin <send@mirko.pm>
 #
 #, fuzzy
 msgid ""
