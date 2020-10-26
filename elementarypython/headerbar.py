@@ -46,7 +46,7 @@ class Headerbar(Gtk.HeaderBar):
         self.pack_end(self.hbar_color)
 
     def on_hbar_help_clicked(self, widget):
-        webbrowser.open_new_tab("https://github.com/mirkobrombin/ElementaryPython")
+        webbrowser.open_new_tab("https://git.mirko.pm/brombinmirko/ElementaryPython")
 
     def on_hbar_color_color_set(self, widget):
         cn.Colors.primary_color = widget.get_rgba().to_string()

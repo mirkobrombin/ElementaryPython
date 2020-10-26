@@ -73,5 +73,5 @@ class Welcome(Gtk.Box):
                 print(_('Terminal Not Found!'))
         elif index == 2:
             # Open webpage
-            webbrowser.open_new_tab("https://github.com/mirkobrombin/ElementaryPython")
+            webbrowser.open_new_tab("https://git.mirko.pm/brombinmirko/ElementaryPython")
         print("Index: "+str(index))

@@ -39,10 +39,10 @@ class App:
     application_description = _('This is just a python template')
     application_version ="1.1"
     app_years = "2017-2018"
-    main_url = "https://github.com/mirkobrombin/elementarypython"
-    bug_url = "https://github.com/mirkobrombin/elementarypython/issues/labels/bug"
-    help_url = "https://github.com/mirkobrombin/elementarypython/issues"
-    translate_url = "https://github.com/mirkobrombin/elementarypython/blob/master/CONTRIBUTING.md"
+    main_url = "https://git.mirko.pm/brombinmirko/ElementaryPython"
+    bug_url = "https://git.mirko.pm/brombinmirko/ElementaryPython/issues/labels/bug"
+    help_url = "https://git.mirko.pm/brombinmirko/ElementaryPython/issues"
+    translate_url = "https://git.mirko.pm/brombinmirko/ElementaryPython/blob/master/CONTRIBUTING.md"
     about_authors = None # Mirko Brombin <brombinmirko@gmail.com>
     about_documenters = None
     about_comments = application_description
