@@ -56,7 +56,7 @@ class Headerbar(Gtk.HeaderBar):
             @define-color colorPrimary """+cn.Colors.primary_color+""";
             @define-color textColorPrimary """+cn.Colors.primary_text_color+""";
             @define-color textColorPrimaryShadow """+cn.Colors.primary_text_shadow_color+""";
-        """;
+        """
 
         style_provider = Gtk.CssProvider()
         style_provider.load_from_data(bytes(stylesheet.encode()))
