@@ -73,4 +73,4 @@ app.bug_url = cn.App.bug_url
 app.help_url = cn.App.help_url
 app.translate_url = cn.App.translate_url
 
-app.run("", Gio.ApplicationFlags.FLAGS_NONE)
+app.run("")
