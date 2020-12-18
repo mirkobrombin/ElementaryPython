@@ -44,15 +44,17 @@ class Welcome(Gtk.Box):
             _ = translate.gettext
         except FileNotFoundError:
             _ = str
+        self._ = _
 
         # Create welcome widget
         welcome = Granite.WidgetsWelcome()
         welcome = welcome.new("Welcome", cn.App.application_description)
 
         # Welcome voices
-        welcome.append("object-inverse", _('Dark Mode'), _('Switch to the dark side'))
+        welcome.append("weather-clear-night", _('Dark Mode'), _('Switch to the dark side'))
         welcome.append("utilities-terminal", _('Open Terminal'), _('Just an example of action'))
         welcome.append("help-contents", _('Info'), _('Learn more about this application'))
+        welcome.append("help-browser", _('Doc'), _('Valadoc for Granite'))
 
         welcome.connect("activated", self.on_welcome_activated)
 
@@ -61,17 +63,18 @@ class Welcome(Gtk.Box):
     def on_welcome_activated(self, widget, index):
         if index == 0:
             # Use GTK Dark theme
-            if self.settings.get_property("gtk-application-prefer-dark-theme") == True:
-                self.settings.set_property("gtk-application-prefer-dark-theme", False)
-            else:
-                self.settings.set_property("gtk-application-prefer-dark-theme", True)
+            theme = self.settings.get_property("gtk-application-prefer-dark-theme")
+            self.settings.set_property("gtk-application-prefer-dark-theme", not theme)
         elif index == 1:
-            # Open terminal
+            # Launch terminal
             try:
                 subprocess.check_output("io.elementary.terminal")
             except:
-                print(_('Terminal Not Found!'))
+                print(self._('Terminal Not Found!'))
         elif index == 2:
-            # Open webpage
-            webbrowser.open_new_tab("https://git.mirko.pm/brombinmirko/ElementaryPython")
-        print("Index: "+str(index))
+            # Open GitHub repository
+            webbrowser.open_new_tab("https://github.com/mirkobrombin/ElementaryPython")
+        else:
+            # Open valadoc
+            webbrowser.open_new_tab("https://valadoc.org/granite/Granite.html")
+        print("Index: %s" % str(index))

@@ -34,14 +34,8 @@ class Application(Granite.Application):
         self.win = wn.Window()
         self.win.set_default_size(600, 600) 
         self.win.connect("delete-event", Gtk.main_quit)
-
-        parser = argparse.ArgumentParser(description = cn.App.application_description)
-        parser.add_argument('--about', action='store_true', help='About '+cn.App.application_name)
-        args = parser.parse_args()  
-        if args.about == True:
-            self.show_about(self.win)
-        else:
-            self.win.show_all()
+        
+        self.win.show_all()
 
         Gtk.main()
 
