@@ -19,33 +19,33 @@
 '''
 
 import gi
-import locale
-import gettext
-import argparse
+
 gi.require_version('Gtk', '3.0')
 gi.require_version('Granite', '1.0')
-from gi.repository import Gtk, Gio, Gdk, Granite, GObject
-import constants as cn
-import window as wn
 
-class Application(Granite.Application):
+from gi.repository import Gtk, Gio, Gdk, Granite
+
+import window as wn
+import constants as cn
+class Application(Gtk.Application):
 
     def do_activate(self):
         self.win = wn.Window()
-        self.win.set_default_size(600, 600) 
+        self.win.set_default_size(600, 600)
         self.win.connect("delete-event", Gtk.main_quit)
-        
+
         self.win.show_all()
 
         Gtk.main()
 
+
 app = Application()
 
-stylesheet = """
-    @define-color colorPrimary """+cn.Colors.primary_color+""";
-    @define-color textColorPrimary """+cn.Colors.primary_text_color+""";
-    @define-color textColorPrimaryShadow """+cn.Colors.primary_text_shadow_color+""";
-""";
+stylesheet = f"""
+    @define-color colorPrimary {cn.Colors.primary_color};
+    @define-color textColorPrimary {cn.Colors.primary_text_color};
+    @define-color textColorPrimaryShadow {cn.Colors.primary_text_shadow_color};
+"""
 
 style_provider = Gtk.CssProvider()
 style_provider.load_from_data(bytes(stylesheet.encode()))
