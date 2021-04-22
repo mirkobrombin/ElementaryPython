@@ -21,18 +21,32 @@ import gi
 import os
 import locale
 import gettext
+
 gi.require_version('Gtk', '3.0')
+
 from gi.repository import Gtk
 
+'''We already talked about translations'''
 try:
     current_locale, encoding = locale.getdefaultlocale()
-    locale_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locale')
-    translate = gettext.translation ("elementarypython", locale_path, [current_locale] )
+    locale_path = os.path.join(
+        os.path.abspath(
+            os.path.dirname(__file__)
+        ), 
+        'locale'
+    )
+    translate = gettext.translation(
+        "elementarypython", 
+        locale_path, 
+        [current_locale] 
+    )
     _ = translate.gettext
 except FileNotFoundError:
     _ = str
 
 class App:
+    '''Here we are defining our Application infos, so we can easily
+    use in all our application files'''
     application_shortname = "elementarypython"
     application_id = "com.github.mirkobrombin.elementarypython"
     application_name = "Elementary Python"
