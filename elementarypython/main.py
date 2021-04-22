@@ -21,15 +21,18 @@
 import gi
 
 gi.require_version('Gtk', '3.0')
-gi.require_version('Granite', '1.0')
 
-from gi.repository import Gtk, Gio, Gdk, Granite
+from gi.repository import Gtk, Gio, Gdk
 
 import window as wn
 import constants as cn
+
 class Application(Gtk.Application):
 
     def do_activate(self):
+        '''Here we are creating a new instante of the Windows, setting its 
+        size and connecting the delete-event signal to correctly handle 
+        the application exit.'''
         self.win = wn.Window()
         self.win.set_default_size(600, 600)
         self.win.connect("delete-event", Gtk.main_quit)
@@ -41,12 +44,15 @@ class Application(Gtk.Application):
 
 app = Application()
 
+'''Here we are defining the application colors, using the parameters 
+defined in the constants file.'''
 stylesheet = f"""
     @define-color colorPrimary {cn.Colors.primary_color};
     @define-color textColorPrimary {cn.Colors.primary_text_color};
     @define-color textColorPrimaryShadow {cn.Colors.primary_text_shadow_color};
 """
 
+'''And here we are injecting the style CSS in the application'''
 style_provider = Gtk.CssProvider()
 style_provider.load_from_data(bytes(stylesheet.encode()))
 Gtk.StyleContext.add_provider_for_screen(
@@ -54,6 +60,7 @@ Gtk.StyleContext.add_provider_for_screen(
     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
 )
 
+'''Defining our application infos'''
 app.application_id = cn.App.application_id
 app.flags = Gio.ApplicationFlags.FLAGS_NONE
 app.program_name = cn.App.application_name
@@ -67,4 +74,5 @@ app.bug_url = cn.App.bug_url
 app.help_url = cn.App.help_url
 app.translate_url = cn.App.translate_url
 
+'''Let's make our app roar!'''
 app.run("")
