@@ -26,12 +26,12 @@ This template is available to everyone under the [GPL3 license](https://github.c
 
 In order to promote the development of this project and respecting the license, it is correct and moral to [attribute third party code credits to the author](https://opensource.stackexchange.com/a/4582).  
 
-Since your application can be an example for other users who intend to develop their own, you can ask [here](https://github.com/brombinmirko/ElementaryPython/issues) to list your application on this page.  
+Since your application can be an example for other users who intend to develop their own, you can open a PR to list your application on this page.
 
 If you have any doubts or need help with development, do not hesitate to contact me :blush:
 
 ## Examples
-There are several applications based on this template:: 
+There are several applications based on or inspired by this template that you can use as a reference to learn:
 - [Bottles](https://github.com/brombinmirko/Bottles)
 - [Football](https://github.com/brombinmirko/Football)
 - [PPAExtender](https://github.com/brombinmirko/PPAExtender)
@@ -41,7 +41,9 @@ There are several applications based on this template::
 - [clips](https://github.com/hezral/clips)
 - [Mastodon-GTK+](https://github.com/AnaGelez/mastodon_gtk)
 - [Rogu](https://github.com/hezral/Rogu)
-
+- [quickword[(https://github.com/hezral/quickword)
+- [inspektor](https://github.com/hezral/inspektor)
+- [clips](https://github.com/hezral/clips)
 
 ## Problems/New Features?
 In any case, ask for support [here](https://github.com/brombinmirko/ElementaryPython/issues).
