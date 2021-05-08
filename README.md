@@ -15,11 +15,11 @@
 </div>
 
 <div align="center">
-    <img  src="https://github.com/brombinmirko/ElementaryPython/raw/master/screenshot.png" alt="Screenshot"> <br>
-    <img  src="https://github.com/brombinmirko/ElementaryPython/raw/master/screenshot-dark.png" alt="Screenshot Dark">
+    <img  src="https://github.com/brombinmirko/ElementaryPython/raw/master/screenshot.png" alt="Screenshot" width="400">
+    <img  src="https://github.com/brombinmirko/ElementaryPython/raw/master/screenshot-dark.png" alt="Screenshot Dark" width="400">
 </div>
 
-## How to use this template
+## 🚀 How to start
 First of all, I am happy to help you by providing a starter pack for creating your own elementary OS applications! :kissing_heart:  
   
 This template is available to everyone under the [GPL3 license](https://github.com/brombinmirko/ElementaryPython/blob/master/LICENSE), which means that you have to keep that license or change it with a compatible one.  
@@ -30,7 +30,7 @@ Since your application can be an example for other users who intend to develop t
 
 If you have any doubts or need help with development, do not hesitate to contact me :blush:
 
-## Examples
+## 🎨 Examples/Showcase
 There are several applications based on or inspired by this template that you can use as a reference to learn:
 - [Bottles](https://github.com/brombinmirko/Bottles)
 - [Football](https://github.com/brombinmirko/Football)
@@ -45,20 +45,20 @@ There are several applications based on or inspired by this template that you ca
 - [inspektor](https://github.com/hezral/inspektor)
 - [clips](https://github.com/hezral/clips)
 
-## Problems/New Features?
+## 🐞 Problems/New Features?
 In any case, ask for support [here](https://github.com/brombinmirko/ElementaryPython/issues).
 
-## Requirements
+## 🔧 Requirements
 - python3
 - libgtk-3-dev
 - libgranite-dev 
 
-## How to run
+## 🔧 How to run
 ```bash
 com.github.mirkobrombin.elementarypython
 ```
 
-## Installation
+## 🔧 Installation
 Grab an updated release [here](https://github.com/brombinmirko/ElementaryPython/-/archive/master/ElementaryPython-master.zip) or use **git**:
 
 ```bash
