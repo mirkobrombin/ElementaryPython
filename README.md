@@ -41,10 +41,10 @@ There are several applications based on or inspired by this template that you ca
 - [clips](https://github.com/hezral/clips)
 - [Mastodon-GTK+](https://github.com/AnaGelez/mastodon_gtk)
 - [Rogu](https://github.com/hezral/Rogu)
-- [quickword[(https://github.com/hezral/quickword)
+- [quickword](https://github.com/hezral/quickword)
 - [inspektor](https://github.com/hezral/inspektor)
 - [clips](https://github.com/hezral/clips)
-
+- [Hasher](https://github.com/JeysonFlores/hasher)
 ## 🐞 Problems/New Features?
 In any case, ask for support [here](https://github.com/brombinmirko/ElementaryPython/issues).
 
